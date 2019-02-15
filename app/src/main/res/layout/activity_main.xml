@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/binary_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="@string/binary"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/binary_editText"
+        app:layout_constraintEnd_toStartOf="@+id/binary_editText" />
+
+    <EditText
+        android:id="@+id/binary_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:ems="10"
+        android:digits="1,0"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/decimal_editText"
+        app:layout_constraintEnd_toEndOf="@+id/decimal_editText"
+        app:layout_constraintStart_toStartOf="@+id/decimal_editText" />
+
+    <EditText
+        android:id="@+id/octal_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/octal_textView"
+        app:layout_constraintStart_toStartOf="@+id/binary_editText" />
+
+    <TextView
+        android:id="@+id/octal_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="@string/octal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/octal_editText"
+        app:layout_constraintTop_toBottomOf="@+id/binary_editText" />
+
+    <EditText
+        android:id="@+id/decimal_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/hexadecimal_editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/decimal_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="@string/decimal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/decimal_editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hexadecimal_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="@string/hexadecimal"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hexadecimal_editText"
+        app:layout_constraintEnd_toStartOf="@+id/hexadecimal_editText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hexadecimal_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hexadecimal_textView"
+        app:layout_constraintTop_toBottomOf="@+id/decimal_editText" />
+</android.support.constraint.ConstraintLayout>
